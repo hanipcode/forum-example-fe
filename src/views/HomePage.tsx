@@ -16,9 +16,7 @@ export default function HomePage() {
         const services = new Services();
         const { data } = await services.getAllPost();
         setPosts(data);
-      } catch (error) {
-        swal('Error', getErrorMessage(error), 'error');
-      }
+      } catch (error) {}
     }
     getPosts();
   }, []);
